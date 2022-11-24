@@ -1,0 +1,131 @@
+.bio-page {    
+    h3 {
+        margin: 50px 0;
+    }
+}
+
+.card.bio {
+    padding: 30px;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        height: 150px;
+        widows: 150px;
+        border: var(--border-std);
+        border-radius: 50%;
+    }
+}
+
+.experiences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    .work {
+        padding-bottom: 75px;
+
+        .header {
+            padding: 30px 30px 0 30px;
+        }
+
+        .description {
+            padding: 0 30px 30px 30px;
+        }
+
+        h5,
+        .org {
+            margin: 0;
+        }
+
+        p.med {
+            margin-bottom: 0;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top: var(--border-std);
+            padding: 20px 30px;
+
+            p {
+                margin: 0;
+            }
+
+            i {
+                margin: 0 10px;
+            }
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+.card.proficiencies {
+    display: flex;
+    flex-direction: row;
+}
+
+ul.proficiency-list {
+    margin: 0 100px 0 0;
+    padding: 0;
+
+    h5 {
+        margin-top: 0;
+    }
+
+    li {
+        list-style: none;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+//Responsive Media Queries
+
+
+@media (max-width: 1200px) {
+    .experiences {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .experiences {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card.proficiencies{
+        flex-direction: column;
+    }
+
+    ul.proficiency-list{
+        margin: 0 0 50px 0;
+
+        &:last-child{
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+// ======================================
+//  Search Fields
+// ======================================
+
+.search_bar {
+    width: 70%;
+}
+
+// ======================================
+//  Ajax Search Results
+// ======================================
+
+.search_result {
+    background-color: var(--color-bg);
+    border: var(--border-std);
+    border-radius: var(--corner-sm);
+    max-height: 200px;
+    overflow: scroll;
+    margin-top: 10px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    display: none;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            padding: 5px 0;
+
+            a {
+                font-weight: 400;
+            }
+        }
+    }
+
+    p{
+        margin: 0;
+    }
+
+    &:empty {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .search_bar {
+        width: 100%;
+    }
+}

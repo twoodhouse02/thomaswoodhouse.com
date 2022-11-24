@@ -1,0 +1,91 @@
+// ======================================
+//  Bottom Sheet Overrides
+// ======================================
+
+[data-rsbs-overlay],
+[data-rsbs-backdrop],
+[data-rsbs-root]:after {
+    z-index: 100;
+}
+
+#launchBottomSheet {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 30px;
+    justify-content: center;
+    z-index: 90;
+    display: none;
+}
+
+[data-rsbs-overlay],
+[data-rsbs-root]:after{
+    background: var(--color-bg-accent-1);
+}
+
+[data-rsbs-header]:before{
+    background-color: var(--color-text);
+    opacity: .5;
+}
+
+// ======================================
+//  Menus in Bottom Sheet:
+// ======================================
+
+.website-name-full {
+    font-size: 25px;
+    font-weight: 800;
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: var(--color-text);
+}
+
+.mobile-menu {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+
+    li{
+        margin: 10px 0;
+    }
+    
+    a {
+        color: var(--color-text);
+        background-color: transparent;
+        padding: 0.5em 1em;
+        border-radius: var(--corner-sm);
+        margin: 0 5px;
+        transition: 0.2s ease all;
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+
+        i {
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--color-text);
+        }
+
+        &:visited {
+            color: var(--color-text);
+        }
+
+        &:hover {
+            color: var(--color-text);
+            background-color: var(--color-bg-accent-2);
+        }
+    }
+}
+
+//Responsive Media Queries
+
+@media (max-width: 1024px) {
+    #launchBottomSheet {
+        display: flex;
+    }
+}

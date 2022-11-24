@@ -1,0 +1,72 @@
+// ======================================
+//  Single-line Text Input
+// ======================================
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    border: none;
+    background-color: var(--color-bg-accent-2);
+    border-radius: var(--corner-sm);
+    padding: 10px;
+}
+
+// ======================================
+//  Input Error
+// ======================================
+
+.input-error {
+    background-color: var(--color-bg-accent-2);
+    border-radius: var(--corner-sm);
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+
+    &.icon {
+        &::before {
+            content: "";
+            font-size: 20px;
+            margin-right: 5px;
+            color: red;
+            font-family: "iconsax" !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+}
+
+// ======================================
+//  Input Containers
+// ======================================
+
+.form-elements {
+    h5 {
+        margin: 0 0 20px 0;
+    }
+}
+
+.fields {
+    display: grid;
+    margin-bottom: 10px;
+
+    &.two-col {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+}
+
+.wpcf7{
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+}

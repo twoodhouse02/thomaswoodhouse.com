@@ -1,0 +1,170 @@
+// Chips - Filter/Selection
+
+//Overrides for WPCF7 Forms
+
+.chips {
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + .wpcf7-list-item-label {
+        transition: var(--transition-speed-std);
+        cursor: pointer;
+        border-radius: var(--corner-sm);
+        background-color: var(--color-bg-accent-2);
+        border: none;
+        padding: 0.5em 1em !important;
+        display: inline-block;
+        -moz-user-select: -moz-none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--color-text);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            transform: rotate(45deg);
+            height: 12px;
+            width: 7px;
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            margin-right: -10px;
+            opacity: 0;
+            transition: var(--transition-speed-std);
+        }
+
+        &:hover {
+            background-color: var(--color-bg-accent-3);
+
+            &::before {
+                margin-right: 10px;
+                opacity: 1;
+                border-color: var(--color-text);
+            }
+        }
+    }
+
+    input[type="checkbox"]:checked + .wpcf7-list-item-label {
+        transition: var(--transition-speed-std);
+        background-color: var(--color-btn);
+        color: #fff;
+
+        &::before {
+            margin-right: 10px;
+            opacity: 1;
+            border-color: #fff;
+        }
+    }
+}
+
+.wpcf7-list-item {
+    margin: 0 10px 10px 0;
+}
+
+//Overrides for "FilterEverything" checkboxes. Should mimmick Filter/Selection styles
+
+.chips,
+.wpc-term-item-content-wrapper {
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + label {
+        transition: var(--transition-speed-std);
+        cursor: pointer;
+        border-radius: var(--corner-sm);
+        background-color: var(--color-bg-accent-2);
+        border: none;
+        padding: 0.5em 1em !important;
+        display: inline-block;
+        -moz-user-select: -moz-none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        a {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                transform: rotate(45deg);
+                height: 12px;
+                width: 7px;
+                border-bottom: 2px solid var(--color-text);
+                border-right: 2px solid var(--color-text);
+                margin-right: -10px;
+                opacity: 0;
+                transition: var(--transition-speed-std);
+            }
+        }
+
+        &:hover {
+            background-color: var(--color-bg-accent-3);
+
+            a {
+                &::before {
+                    margin-right: 10px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    input[type="checkbox"]:checked + label {
+        transition: var(--transition-speed-std);
+        background-color: var(--color-btn);
+
+        a {
+            color: #fff;
+
+            &::before {
+                margin-right: 10px;
+                opacity: 1;
+                border-color: #fff;
+            }
+        }
+    }
+}
+
+.wpc-filters-ul-list {
+    display: flex;
+    margin-bottom: 0;
+
+    li {
+        margin-right: 10px;
+    }
+}
+
+.wpc-filters-widget-main-wrapper ul.wpc-filters-ul-list {
+    padding: 0 !important;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.wpc-filters-section {
+    margin-bottom: 0 !important;
+}
+
+.wpc-edit-filter-set {
+    display: none;
+}
+
+.widget-title.wpc-filter-title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}

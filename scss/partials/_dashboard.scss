@@ -1,0 +1,393 @@
+// ======================================
+//  Dashboard Search
+// ======================================
+
+#dashboard-search-container {
+    display: flex;
+    min-height: 65vh;
+    justify-content: center;
+    align-items: center;
+
+    .search-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 700px;
+        margin: 100px auto;
+        padding: 50px;
+
+        i {
+            font-size: 100px;
+            color: var(--color-btn);
+        }
+    }
+}
+
+// ======================================
+//  Dashboard Cards Hero
+// ======================================
+
+hero.standard.post.dashboard {
+    background-size: 300% 300%;
+    background-image: linear-gradient(
+        -45deg,
+        rgba(65, 88, 208, 1) 0%,
+        rgba(200, 80, 192, 1) 51%,
+        rgba(255, 204, 112, 1) 100%
+    );
+    -webkit-animation: heroBG 20s ease infinite;
+    animation: heroBG 20s ease infinite;
+    margin-bottom: 75px;
+
+    .post-details {
+        padding-bottom: 145px;
+
+        .bottom {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px 0;
+
+            .total-progress {
+                width: 100%;
+                padding: 0 30px 15px 30px;
+                margin-bottom: 15px;
+                border-bottom: var(--border-std);
+            }
+
+            .details {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 30px;
+
+                .dates {
+                    display: flex;
+
+                    .labeled-field {
+                        margin-right: 40px;
+                    }
+                }
+            }
+
+            .tag {
+                margin-left: 30px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes heroBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes heroBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// ======================================
+//  Dashboard Cards Grid
+// ======================================
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(250px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+// ======================================
+//  Dashboard Cards - Buttons
+// ======================================
+
+.dashboard-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+
+    h4,
+    p {
+        margin: 0;
+    }
+
+    .details {
+        margin-top: 20px;
+        color: var(--color-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .tag {
+            margin-top: 10px;
+        }
+
+        p {
+            opacity: 0.7;
+        }
+    }
+
+    i {
+        font-size: 20px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: var(--transition-speed-std);
+    }
+
+    &:hover {
+        i {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+// ==============================================
+//  Dashboard Sidebar - Your Tasks
+// ==============================================
+
+.customer-tasks {
+    .no-tasks {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        i {
+            font-size: 50px;
+            background-color: var(--color-bg);
+            color: var(--color-bg-accent-3);
+            border-radius: 50%;
+            padding: 30px;
+        }
+    }
+}
+
+// ======================================
+//  Dashboard Specific Modal - Metrics
+// ======================================
+.modal-progress {
+    padding: 30px;
+    border-bottom: var(--border-std);
+
+    p {
+        margin: 0;
+    }
+}
+.dashboard-to-do {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        list-style-position: outside;
+        font-size: 1em;
+        padding: 0.3em 0 0.3em 1.8em;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            color: var(--color-bg-accent-3);
+            margin-left: -1.5em;
+            width: 1.5em;
+            display: inline-block;
+            font-size: 1.2em;
+            font-family: "iconsax" !important;
+            speak: never;
+            font-style: normal;
+            font-weight: bold;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        &.complete::before {
+            color: var(--color-success);
+        }
+    }
+}
+
+// ======================================
+//  Dashboard Specific Modal - Pricing
+// ======================================
+
+#modal-dashboard-pricing {
+    .total-price {
+        h2 {
+            margin: 0;
+        }
+        h5 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 0;
+
+            &.tag {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    h4 {
+        padding-left: 10px;
+    }
+
+    .paymentItems {
+        margin: 0;
+        padding: 0 10px;
+        list-style: none;
+
+        li {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            border-bottom: var(--border-std);
+            padding: 5px 0;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            p {
+                margin: 0;
+
+                &:first-child {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+// ==============================================
+//  Dashboard Specific Modal - Creative Brief
+// ==============================================
+
+.creativeBrief {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    h5 {
+        margin-bottom: 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// ==============================================
+//  Dashboard Specific Modal - Documents
+// ==============================================
+
+// Customize table cells for Documents
+.table.documents {
+    .title {
+        width: 40%;
+    }
+
+    .status {
+        width: 30%;
+    }
+
+    .date {
+        width: 30%;
+    }
+}
+
+// ==============================================
+//  Dashboard Specific Modal - Links
+// ==============================================
+
+ul.links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        border-bottom: var(--border-std);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        a,
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        a {
+            padding: 10px 0;
+        }
+    }
+}
+
+//Responsive Media Queries
+
+@media (max-width: 1200px) {
+    hero.standard.post.dashboard {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    hero.standard.post.dashboard {
+        .post-details {
+            padding-bottom: 185px;
+            .bottom {
+                .details {
+                    .dates {
+                        flex-direction: column;
+
+                        .labeled-field {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

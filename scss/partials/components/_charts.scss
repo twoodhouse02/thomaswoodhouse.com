@@ -1,0 +1,39 @@
+// ======================================
+//  Radial Charts
+// ======================================
+
+.metric{
+    max-width: 100px;
+}
+
+
+// ======================================
+//  Progress Bars
+// ======================================
+
+progress {
+    border-radius: var(--corner-sm); 
+    width: 100%;
+    height: 8px;
+  }
+  progress::-webkit-progress-bar {
+    background-color: var(--color-bg-accent-1);
+    border-radius: var(--corner-sm); 
+  }
+  progress::-webkit-progress-value {
+    background-color: var(--color-btn);
+    border-radius: var(--corner-sm); 
+  }
+  progress::-moz-progress-bar {
+    /* style rules */
+    background-color: var(--color-btn);
+    border-radius: var(--corner-sm); 
+  }
+
+  .progress-label{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  

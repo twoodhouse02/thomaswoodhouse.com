@@ -1,0 +1,105 @@
+// ======================================
+//  Favorites List
+// ======================================
+
+ul.favorites-list,
+.no-favorites {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: var(--border-std);
+
+        a,
+        p {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .post {
+            padding: 10px;
+
+            img {
+                height: 55px;
+                width: 55px;
+                border-radius: var(--corner-sm);
+                margin-right: 10px;
+                -o-object-fit: cover;
+                   object-fit: cover;
+            }
+        }
+
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+
+    .simplefavorite-button {
+        width: 75px;
+        font-size: 25px;
+
+        i.isax-heart {
+            &::before {
+                content: "";
+            }
+        }
+    }
+}
+
+
+button.simplefavorites-clear {
+    border: none;
+    background-color: transparent;
+    color: var(--color-btn);
+    padding: 0.5em 1em;
+    border-radius: var(--corner-sm);
+    margin: 0 5px;
+    transition: 0.2s ease all;
+    margin: 0;
+    display: inline-block;
+    font-weight: 400;
+
+    &:hover {
+        color: var(--color-text);
+        background-color: var(--color-bg-accent-1);
+        cursor: pointer;
+    }
+}
+
+.no-favorites {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 50px;
+
+    &::before {
+        content: "";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-btn);
+        font-size: 55px;
+        background-color: var(--color-bg-accent-1);
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin: 50px auto;
+        font-family: "iconsax" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+}

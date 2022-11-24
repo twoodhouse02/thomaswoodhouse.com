@@ -1,0 +1,71 @@
+//jQuery Modal CSS Overides
+
+.modal {
+    box-shadow: none;
+    border-radius: var(--corner-l);
+    background: var(--color-card);
+    max-width: 700px;
+    padding: 0;
+    border: var(--border-std);
+
+    a.close-modal[class*="isax-"] {
+        top: 15px;
+        right: 15px;
+        background-image: none;
+        background-color: var(--color-bg-accent-2);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        font-size: 25px;
+        transform: rotate(45deg);
+        color: var(--color-text);
+        line-height: 1.25;
+        text-align: center;
+        text-decoration: none;
+        text-indent: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-header,
+    .modal-content{
+        padding: 30px;
+    }
+
+    .modal-content{
+        border-radius: var(--corner-m);
+        max-height: 50vh;
+        overflow-y: scroll;
+    }
+
+    .modal-header {
+        display: flex;
+        width: 100%;
+        padding-right: 70px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: var(--border-std);
+
+        h4 {
+            margin: 0;
+        }
+    }
+}
+
+.jquery-modal.blocker {
+    z-index: 150;
+}
+
+
+// ======================================
+// Responsive Media Queries
+// ======================================
+
+@media (max-width: 1024px) {
+    .modal{
+        .modal-content{
+            max-height: 70vh;
+        }
+    }
+}

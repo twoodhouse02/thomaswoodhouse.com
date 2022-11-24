@@ -1,0 +1,128 @@
+// ======================================
+//  Buttons
+// ======================================
+
+.btn,
+input[type="submit"] {
+    background-color: var(--color-btn);
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: var(--corner-sm);
+    margin: 0 5px;
+    transition: 0.2s ease all;
+    margin: 0;
+    display: inline-block;
+    font-weight: 400;
+    border: none;
+
+    &:visited {
+        color: #fff;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: var(--color-btn-hover);
+        cursor: pointer;
+    }
+
+    &.simple {
+        background-color: transparent;
+        padding: 0;
+        margin-right: 15px;
+
+        &.dark {
+            color: var(--color-btn);
+        }
+
+        &.light {
+            color: #ffffff;
+        }
+    }
+
+    &.full-width {
+        width: 100%;
+        text-align: center;
+    }
+
+    &.icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: var(--color-bg-accent-1);
+        color: var(--color-text);
+        font-weight: bold;
+
+        &.light {
+            background-color: var(--color-bg);
+        }
+    }
+
+    &.fab {
+        font-size: 20px;
+        border-radius: var(--corner-l);
+        box-shadow: 10px 5px 45px 25px var(--color-bg);
+        display: flex;
+        align-items: center;
+
+        i{
+            margin-right: 10px;
+        }
+    }
+}
+
+input[type="submit"]{
+    margin-top: 5px;
+}
+
+i.favorite {
+    color: #ff006e;
+}
+
+// ======================================
+//  Checkbox - Toggle
+// ======================================
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid var(--color-text);
+    transition: 0.4s;
+}
+
+.toggle-switch:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--color-text);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .toggle-switch:before {
+    transform: translateX(15px);
+}

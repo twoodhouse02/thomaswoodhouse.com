@@ -1,0 +1,217 @@
+//Main Navigation
+
+header#desktop_nav {
+    height: 100%;
+    width: var(--sidebar-width-closed);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: var(--color-menu);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow-x: hidden;
+    transition: 0.35s;
+    padding-top: 60px;
+    border-right: var(--border-std);
+
+    .site-branding {
+        display: flex;
+        flex-direction: column;
+        height: 75px;
+        position: relative;
+    }
+
+    .website-icon {
+        opacity: 1;
+        display: flex;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: 0.25s;
+    }
+
+    .website-name-full {
+        opacity: 0;
+        display: flex;
+        overflow: hidden;
+        margin: 0;
+        height: 75px;
+        font-size: 25px;
+        font-weight: 800;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        transition: 0s;
+        color: var(--color-text);
+    }
+
+    #site-navigation {
+        margin-top: 50px;
+
+        a {
+            color: transparent;
+            background-color: transparent;
+            padding: 0.5em 1em;
+            border-radius: var(--corner-sm);
+            margin: 0 5px;
+            transition: 0.2s ease all;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            overflow: hidden;
+            white-space: nowrap;
+
+            i {
+                margin-right: 10px;
+                font-weight: bold;
+                font-size: 20px;
+                color: var(--color-text);
+            }
+
+            &:visited {
+                color: var(--color-text);
+            }
+
+            &:hover {
+                color: var(--color-text);
+                background-color: var(--color-bg-accent-2);
+            }
+        }
+
+        .counter{
+            margin-left: auto;
+        }
+    }
+
+    &.open {
+        width: var(--sidebar-width-open);
+
+        .website-name-full {
+            opacity: 1;
+            transition: 0.25s;
+            transition-delay: 0.25s;
+        }
+
+        .website-icon {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.25s;
+        }
+
+        #site-navigation a {
+            color: var(--color-text);
+        }
+    }
+}
+
+#primary-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
+
+    li {
+        margin: 5px 0;
+    }
+}
+
+#masthead .custom-logo {
+    height: 50px;
+    margin-top: 10px;
+}
+
+nav#site-navigation .menu-item.nav-cta a {
+    background-color: var(--color-accent-primary);
+    color: #fff;
+
+    &:hover {
+        background-color: var(--color-accent-secondary);
+    }
+}
+
+span.event-count {
+    font-size: 0.7em;
+    border: 1px var(--color-accent-primary) solid;
+    padding: 0.5em 1em;
+    color: var(--color-accent-primary);
+    border-radius: var(--corner-card);
+    margin-left: 10px;
+    margin-top: -2px;
+    -webkit-animation: eventCountReveal 0.5s 1 ease-out;
+    animation: eventCountReveal 0.5s 1 ease-out;
+}
+
+// Alert Banner - Mobile Scroll
+
+.scroll-container {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 60%;
+    margin-right: 10px;
+}
+
+.scroll-text {
+    /* animation properties */
+    transform: translateX(100%);
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+/* for Firefox */
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+    from {
+        -webkit-transform: translateX(100%);
+    }
+    to {
+        -webkit-transform: translateX(-110%);
+    }
+}
+
+@keyframes my-animation {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-110%);
+    }
+}
+
+//Mobile Navigation Toggle & Menu
+
+.main-navigation {
+    position: relative;
+}
+
+button.menu-toggle {
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: var(--color-dark);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//Responsive Media Queries
+
+@media (max-width: 1024px) {
+    header#desktop_nav {
+        display: none;
+    }
+}
+
