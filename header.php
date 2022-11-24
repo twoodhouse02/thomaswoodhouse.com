@@ -92,7 +92,7 @@
 					<input type="checkbox" id="checkbox_theme">
 					<span class="toggle-switch"></span>
 				</label>
-				<p class="sm">Dark Mode!</p>
+				<p class="sm">Dark Mode</p>
 			</div>
 
 		</header><!-- #masthead -->
